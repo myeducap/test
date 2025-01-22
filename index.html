@@ -1,42 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#23bdf3">
-    <link rel="manifest" href="/manifest.json">
-    <title>EduCap+</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "YOUR_ADMOB_CLIENT_ID",
-        enable_page_level_ads: true
-      });
-    </script>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-    <script>
-      window.OneSignal = window.OneSignal || [];
-      OneSignal.push(function() {
-        OneSignal.init({
-          appId: "YOUR_ONESIGNAL_APP_ID",
-          notifyButton: { enable: true }
-        });
-      });
-    </script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js').then(() => {
-          console.log('Service Worker registered successfully.');
-        }).catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-      }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#317EFB">
+  <link rel="manifest" href="manifest.json">
+  <title>My PWA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20%;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to EduCap+</h1>
-    <p>Your progressive web app with AdMob and Push Notifications!</p>
+  <h1>Welcome to My PWA</h1>
+  <p>This is a simple Progressive Web App.</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.error('Service Worker Registration Failed:', err));
+    }
+  </script>
 </body>
 </html>
